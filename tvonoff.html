@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .result {
+
+        background-color: #0cd4de;
+        ;
+        height: 100vh;
+        width: 100vw;
+        /* visibility: hidden; */
+    }
+
+    .result-open {
+
+        background-color: #191919;
+        transition: 0.9s;
+        animation-duration: initial;
+    }
+
+    .result-open2 {
+        background-color: whitesmoke;
+        transition: 0.9s;
+
+    }
+
+    button {
+        height: 5vh;
+        width: 10vw;
+        margin-left: 15.4%;
+        top: 120px;
+        position: relative;
+        border-radius: 10px;
+        background-color: #373535;
+        color: #fff;
+        font-weight: bolder;
+        /* box-shadow: 10px 10px 15px red; */
+        transform: translate(0.3);
+        transition: 0.9s;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: aqua;
+        color: black;
+    }
+
+    .btn2 {
+        color: black;
+        background-color: #fff;
+        font-weight: bolder;
+        left: 515px;
+
+    }
+
+    .btn2:hover {
+        cursor: pointer;
+        background-color: aqua;
+        color: #111;
+        font-weight: bolder;
+    }
+
+    .result2 {
+        background-color: rgb(184, 183, 183);
+        height: 70vh;
+        width: 70vw;
+        /* border: 10px solid black; */
+        /* margin-top: 7rem; */
+        position: relative;
+        top: 120px;
+        left: 230px;
+        /* border-radius: 20px; */
+        /* visibility: hidden; */
+    }
+
+    .result2-open {
+
+        background-color: rgb(144, 209, 255);
+        transition: 0.9s;
+    }
+
+    .result2-open2 {
+        /* background-color: rgb(9, 189, 135); */
+        background-color: hotpink;
+        transition: 0.9s;
+    }
+
+    .result3 {
+
+        background-color: #525151;
+        height: 40vh;
+        width: 40vw;
+        position: relative;
+        top: 120px;
+        left: 230px;
+        border: 5px solid white;
+        border-radius: 10px;
+        box-shadow: -20px 20px 60px black;
+
+    }
+
+    .result3-open {
+
+        background-color: violet;
+        transition: 0.9s;
+        /* background-image: url(./bootstrap.jpg); */
+
+    }
+
+    .result3-open3 {
+        background-color: rgb(16, 16, 16);
+        transition: 0.9s;
+    }
+
+    .image1 {
+        visibility: hidden;
+
+        height: 0px;
+        width: 0px;
+        transition: 0.9s;
+        transform: scale(0.5);
+
+    }
+
+    .image1-open {
+        visibility: visible;
+        height: 260px;
+        width: 535px;
+        transition: 0.9s;
+        transform: scale(1);
+        margin-bottom: 15px;
+    }
+
+    .tvbtn1 {
+        margin-right: 110px;
+        margin-right: 10%;
+    }
+
+    .tvbtn2 {
+        margin-right: 70px;
+    }
+
+
+
+
+    
+</style>
+
+<body>
+
+    <div id="btn1" class="result">
+
+        <!-- <input type="button" value="DarkMode"> -->
+        <button onclick="darkmode()">DARK MODE</button>
+        <button onclick="whitemode()" class="btn2">WHITE MODE</button>
+
+        <div id="btn2" class="result2">
+
+            <div id="btn3" class="result3">
+                <!-- <span id="span1">00</span> -->
+                <img id="button1" class="image1" style="border:5px dashed rgb(7, 6, 6) ;" src="./bootstrap.jpg"
+                    height="290px" width="585px">
+
+
+            </div>
+
+        </div>
+
+        <button onclick="tvon()" class="tvbtn1" style="left: 110px;  background-color: green; border-radius: 10px; ">TV
+            ON</button>
+        <button onclick="tvoff()" class="tvbtn2" style="left: 110px;  background-color: red; border-radius: 10px;">TV
+            Off</button>
+    </div>
+
+
+    <script>
+
+        var popup1 = document.getElementById("btn1");
+
+        var popup3 = document.getElementById("btn2");
+
+        var popup5 = document.getElementById("btn3");
+
+        function darkmode() {
+
+            popup1.classList.add("result-open");
+
+            popup3.classList.add("result2-open");
+
+            popup5.classList.add("result3-open");
+
+        }
+
+        var popup2 = document.getElementById("btn1");
+
+        var popup4 = document.getElementById("btn2");
+
+        var popup5 = document.getElementById("btn3");
+
+        function whitemode() {
+
+            popup2.classList.add("result-open2");
+
+            popup4.classList.add("result2-open2");
+
+            popup5.classList.add("result3-open3")
+
+
+        }
+
+
+        var imgpopup = document.getElementById("button1");
+
+        function tvon() {
+
+            imgpopup.classList.add("image1-open");
+        }
+
+        var imgpopup = document.getElementById("button1");
+
+        function tvoff() {
+
+            imgpopup.classList.remove("image1-open")
+        }
+
+        var quetion = document.getElementById("que1")
+
+        function startQue() {
+
+            quetion.classList.add("question-open");
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
